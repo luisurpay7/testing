@@ -17,7 +17,7 @@ describe('Test for hello endpoint', () => {
   describe('test for [GET]/', () => {
     test('should return "Hello World!', async () => {
       const response = await request(app).get('/');
-      console.log('response', response);
+      console.log('response', response.text);
       expect(response.text).toEqual('Hello World!');
     });
   });
