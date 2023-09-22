@@ -20,7 +20,7 @@ jobs:
       - name: Setup Nodejs
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 18
           cache: 'npm'
           cache-dependency-path: ./api/package-lock.json
       - name: install
@@ -49,7 +49,7 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     container:
-      image: node:14
+      image: node:18
 
     services:
       mongo-e2e:
